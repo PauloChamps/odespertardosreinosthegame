@@ -1,0 +1,25 @@
+{
+  "name": "o-despertar-dos-reinos",
+  "version": "1.0.0",
+  "description": "Jogo de cartas multiplayer online em tempo real",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "nodemon server/server.js"
+  },
+  "keywords": [
+    "card-game",
+    "socket.io",
+    "multiplayer",
+    "nodejs"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2",
+    "socket.io": "^4.8.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
