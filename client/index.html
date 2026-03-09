@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>O Despertar dos Reinos</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section id="homeScreen" class="panel">
+        <h1>O Despertar dos Reinos</h1>
+        <p>Crie uma sala e compartilhe o link com amigos.</p>
+        <input id="playerName" placeholder="Seu nome" maxlength="20" />
+        <div class="row">
+          <button id="createRoomBtn">Criar sala</button>
+          <button id="joinRoomBtn">Entrar em sala</button>
+        </div>
+        <input id="roomIdInput" placeholder="ID da sala" maxlength="12" />
+      </section>
+
+      <section id="lobbyScreen" class="panel hidden">
+        <h2>Sala <span id="roomCode"></span></h2>
+        <p>Link da sala:</p>
+        <div class="row">
+          <input id="roomLink" readonly />
+          <button id="copyLinkBtn">Copiar</button>
+        </div>
+        <button id="startGameBtn">Iniciar partida</button>
+      </section>
+
+      <section id="gameScreen" class="panel hidden">
+        <header class="row between">
+          <div>
+            <strong>Rodada:</strong> <span id="roundInfo">1</span>
+          </div>
+          <div>
+            <strong>Vez de:</strong> <span id="turnInfo">-</span>
+          </div>
+          <button id="endTurnBtn">Encerrar turno</button>
+        </header>
+
+        <div id="bossArea" class="boss hidden"></div>
+        <h3>Jogadores</h3>
+        <div id="playersArea" class="players"></div>
+
+        <h3>Sua mão</h3>
+        <div id="handArea" class="cards"></div>
+
+        <h3>Log da partida</h3>
+        <ul id="logArea" class="log"></ul>
+      </section>
+    </main>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/socket.js"></script>
+    <script src="/ui.js"></script>
+    <script src="/game.js"></script>
+  </body>
+</html>

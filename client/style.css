@@ -1,0 +1,80 @@
+:root {
+  color-scheme: dark;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #1e1e2f;
+  color: #f5f7ff;
+}
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.panel {
+  background: #2a2a40;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.hidden {
+  display: none;
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+  margin: 8px 0;
+}
+
+.between {
+  justify-content: space-between;
+  align-items: center;
+}
+
+input,
+button,
+select {
+  border-radius: 6px;
+  border: 1px solid #555;
+  padding: 8px;
+  background: #151522;
+  color: #fff;
+}
+
+button {
+  cursor: pointer;
+}
+
+.players,
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 8px;
+}
+
+.card,
+.player {
+  border: 1px solid #505070;
+  background: #181828;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.log {
+  max-height: 220px;
+  overflow: auto;
+  padding-left: 18px;
+}
+
+.boss {
+  border: 1px solid #e67e22;
+  background: #3f2310;
+  border-radius: 8px;
+  padding: 10px;
+}
